@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<h2>Carrito de Compras</h2>
+<div class="contenedor-carrito">
+  <table class="tabla-carrito">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+
+    <tbody id="lista-carrito">
+      <!-- aquí se cargan los productos -->
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="2"><strong>Total</strong></td>
+        <td id="total"></td>
+        <div id="finalizar-compra" style="display: none; text-align: center; margin-top: 20px;">
+</div>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+<a href="productos.html" class="btn-productos">
+  <button>Seguir comprando</button>
+  <div style="text-align:center; margin-top:10px;">
+  <div style="text-align:center; margin-top:10px;">
+  <a href="pago.html" style="
+    display:inline-block;
+    background-color: green;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+  ">
+    Finalizar compra
+  </a>
+</div>
+
+</div>
+</a>
+<br><br>
+<div class="volver">
+  <a href="index.html" class="btn-volver-inicio">Volver al inicio</a>
+</div>
+<script>
+function mostrarCarrito() {
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  let botonFinalizar = document.getElementById("finalizar-compra");
+
+if (carrito.length > 0) {
+  botonFinalizar.style.display = "block";
+} else {
+  botonFinalizar.style.display = "none";
+}
+
+  let lista = document.getElementById("lista-carrito");
+  let total = 0;
+  lista.innerHTML = ""; // limpiar
+  if (carrito.length === 0) {
+    lista.innerHTML = "<p>El carrito está vacío</p>";
+    document.getElementById("total").innerText = "";
+    return;
+  }
+
+  carrito.forEach((producto, index) => {
+  lista.innerHTML += `
+    <tr>
+      <td>${producto.nombre}</td>
+      <td>$${producto.precio}</td>
+      <td>
+        <button class="btn-eliminar" onclick="eliminarProducto(${index})">
+          Eliminar
+        </button>
+      </td>
+    </tr>
+  `;
+  total += producto.precio;
+});
+
+document.getElementById("total").innerText = "$" + total;
+
+  document.getElementById("total").innerText = "Total: $" + total;
+}
+function eliminarProducto(indice) {
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  carrito.splice(indice, 1); // elimina 1 producto
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  mostrarCarrito(); // vuelve a cargar
+}
+// Mostrar carrito al cargar la página
+mostrarCarrito();
+function finalizarCompra() {
+  alert("Compra finalizada con éxito");
+  localStorage.removeItem("carrito");
+  window.location.href = "index.html";
+}
+</script>
+</body>
+</html>
+

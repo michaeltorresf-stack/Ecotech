@@ -1,0 +1,518 @@
+/* ESTILOS GENERALES */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f0ff;
+    margin: 0;
+    padding: 0;
+}
+
+/* ENCABEZADO */
+header {
+    background-color: #1e90ff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* MENÚ */
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENIDO */
+section, body > h2 {
+    padding: 20px;
+}
+
+/* PRODUCTOS */
+.producto {
+    background-color: white;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+/* BOTONES */
+button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #0d6efd;
+}
+
+/* FORMULARIO */
+form {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+}
+h1 {
+    text-align: center;
+}
+h1{
+    font-family: Georgia, serif;
+}
+h1 {
+    font-size: 48px;
+}
+.subtitulo {
+    text-align: center;
+    font-size: 22px;
+    color: #444;
+    margin-top: 5px;
+}
+nav {
+    text-align: center;
+}
+nav a {
+    color: black;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background: linear-gradient(to right, #8be4ee, #a4fed1);
+}
+h2 {
+    text-align: center;
+}
+.volver {
+  text-align: center;
+  margin-top: 30px;
+}
+.producto {
+  background: white;
+  padding: 20px;
+  width: 260px;
+  border-radius: 10px;
+}
+.lista-productos {
+  display: flex;
+  flex-direction: row; /* horizontal */
+  gap: 30px;           /* espacio entre productos */
+  justify-content: flex-start;
+  margin-left: 40px;
+}
+.producto {
+  background: white;
+  padding: 20px;
+  width: 260px;
+  border-radius: 10px;
+}
+.contacto {
+  background: white;
+  width: 320px;
+  padding: 25px;
+  margin: 40px auto; /* centra el cuadro */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.contacto h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.item-carrito {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.item-carrito button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.contenedor-carrito {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.tabla-carrito {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+}
+
+.tabla-carrito th {
+  background: #2dd4bf;
+  padding: 12px;
+}
+
+.tabla-carrito td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-carrito tfoot td {
+  font-size: 18px;
+  background: #f0fdfa;
+}
+
+.btn-eliminar {
+  background: black;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background: red;
+}
+.tabla-carrito td:last-child {
+  text-align: center;
+}
+.tabla-carrito tfoot td {
+  font-size: 18px;
+  font-weight: bold;
+  background: #f0fdfa;
+  text-align: center;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.logo {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.logo {
+  width: 180px;
+  height: 180px;
+  border: 3px solid red;
+}
+.publicidad {
+  display: block;        /* permite centrar */
+  width: 600px;          /* 🔥 más grande */
+  max-width: 90%;        /* que no se salga en pantallas pequeñas */
+  margin: 40px auto;     /* 🔥 centrada */
+  border-radius: 20px;
+}
+img {
+  width: 700px !important;
+  height: auto
+  display: block !important;
+  margin: 50px auto !important;
+  border: 5px solid rgb(0, 0, 0);
+}
+.imagen-productos {
+  width: 400px !important;  /* 🔥 ahora SÍ se hace pequeña */
+  display: block;
+  margin: 20px auto;
+}
+.productos {
+  display: flex;
+  justify-content: center;   /* 🔥 centra horizontal */
+  gap: 15px;                 /* espacio entre productos */
+  margin-top: 20px;
+}
+.productos button {
+  text-align: center;
+}
+.lista-productos {
+  text-align: center;   /* 🔥 CENTRA TODO */
+  margin-top: 20px;
+}
+
+.lista-productos button {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+body {
+  text-align: center;
+}
+.titulo-principal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* mueve al lado izquierdo */
+  gap: 10px;
+}
+
+.titulo-principal img {
+  width: 35px; /* imagen más pequeña */
+}
+.productos {
+  display: flex;
+  justify-content: center;   /* 🔥 centra las tarjetas */
+  gap: 30px;                 /* espacio entre ellas */
+  margin-top: 30px;
+}
+
+.producto {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 260px;
+  text-align: center;
+}
+.productos-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* 🔥 centra TODO el bloque */
+}
+
+.productos {
+  display: flex;
+  gap: 30px;
+}
+
+.producto {
+  background: white;
+  padding: 20px;
+  width: 260px;
+  border-radius: 12px;
+  text-align: center;
+}
+.logo-grande {
+  width: 280px;        /* 🔥 controla el tamaño */
+}
+
+.logo-grande img {
+  width: 100%;         /* la imagen se adapta al div */
+  height: auto;
+  display: block;
+}
+.header-principal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 30px;
+  padding-right: 100px;
+}
+
+.logo-header {
+  width: 120px;   /* 🔥 tamaño del cuadro rojo */
+  height: auto;
+}
+.texto-header {
+  text-align: left;  /* 🔥 mueve el texto al cuadro rojo */
+}
+.texto-header h1 {
+  margin: 0;
+}
+
+.texto-header p {
+  margin: 5px 0 0;
+}
+.header-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.logo-header {
+  width: 80px;   /* 🔥 tamaño del cuadro rojo */
+  height: auto;
+}
+
+.texto-header h1 {
+  margin: 0;
+}
+
+.texto-header p {
+  margin: 5px 0 0;
+}
+.logo-header {
+  width: 120px !important;
+  height: auto !important;
+}
+.header-principal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0 x;          /* espacio del cuadro rojo */
+  padding-left: 40px;
+}
+
+.logo-header {
+  width: 80px;
+  height: auto;
+}
+
+.texto-header {
+  text-align: left;
+}
+
+.texto-header h1 {
+  margin: 0;
+}
+
+.texto-header p {
+  margin: 5px 0 0;
+}
+.btn-productos button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-productos button:hover {
+  background-color: #333;
+}
+/* ===== PÁGINA DE PAGO ===== */
+
+.titulo-pago {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 26px;
+}
+
+.contenedor-pago {
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Botones generales */
+.btn-pago {
+  width: 100%;
+  padding: 15px;
+  margin: 12px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Colores por método */
+.pse {
+  background-color: #1a7f37;
+}
+
+.debito {
+  background-color: #0d6efd;
+}
+
+.credito {
+  background-color: #6f42c1;
+}
+
+/* Hover */
+.btn-pago:hover {
+  opacity: 0.9;
+}
+
+/* Volver */
+.volver-pago {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #000;
+}
+.form-contacto {
+  width: 350px;
+  margin: 40px auto;        /* ← centra horizontalmente */
+  padding: 20px;
+  background: white;
+  border: 2px solid black;  /* ← borde negro */
+  border-radius: 10px;
+}
+.btn-volver-inicio {
+  display: inline-block;
+  padding: 12px 22px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0 15px;
+  box-sizing: border-box;
+}
+.info-empresa {
+  width: 350px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.btn-volver {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.btn-volver:hover {
+  background: #333;
+}
+#texto-bajo-menu {
+  text-align: center;
+  margin-top: 60px;
+  margin: 20px auto;
+  max-width: 800px;
+  font-size: 18px;
+  color: #000;
+}
+

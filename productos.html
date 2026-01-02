@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Productos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<h2>Boleteria disponible</h2>
+<img 
+  src="img/evento.png"
+  alt="Evento"
+  style="width:400px !important; max-width:400px !important; display:block; margin:20px auto;"
+>
+<div class="productos-wrapper">
+<div class="lista-productos">
+
+  <div class="producto">
+    <h3>Entrada General (Early Bird)</h3>
+    <p>Precio: $45.000</p>
+    <button onclick="agregarAlCarrito('Entrada General (Early Bird)', 45000)">
+  Agregar al carrito
+</button>
+
+  </div>
+
+  <div class="producto">
+    <h3>Entrada VIP (Business)</h3>
+    <p>Precio: $120.000</p>
+    <button onclick="agregarAlCarrito('Entrada VIP (Business)', 120000)">
+  Agregar al carrito
+</button>
+
+  </div>
+
+</div>
+</div>
+<br><br>
+<div style="text-align: center; margin-top: 30px;">
+  <a href="carrito.html">
+    <button>Ir al carrito</button>
+  </a>
+</div>
+<div class="volver">
+  <a href="index.html" class="btn-volver-inicio">Volver al inicio</a>
+</div>
+</body>
+</html>
+<script>
+function agregarAlCarrito(nombre, precio) {
+
+  // Obtener carrito existente o crear uno vacío
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  // Agregar producto
+  carrito.push({ nombre: nombre, precio: precio });
+
+  // Guardar carrito
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  alert("Producto agregado al carrito");
+}
+</script>
